@@ -1,17 +1,29 @@
 import React from "react";
 import { Row, Col, Card, Typography, Carousel, Tag, Button, Steps } from "antd";
-import { PhoneFilled, PlusCircleFilled, SmileFilled } from "@ant-design/icons";
+import {
+  PhoneFilled,
+  PlusCircleFilled,
+  SmileFilled,
+  EditOutlined,
+} from "@ant-design/icons";
+import { HashLink as Link } from "react-router-hash-link";
 const { Title, Paragraph } = Typography;
 const Problems = () => {
   const src =
     "https://th.bing.com/th/id/R.a42334ae0f1fe63a524dd804d9b6b3ec?rik=j9DeQFcvKvQc%2fg&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2017%2f03%2fNestle-Logo.png&ehk=mkxHyeOa3dHqtm8PLQzvhzQsDCYGCqXJWGKcXuxiDts%3d&risl=&pid=ImgRaw&r=0";
 
   const description1 =
-    "Expertos te orientarán de manera personalizada a encontrar las mejores soluciones que se adapten a tus necesidades.";
+    "Nuestros especialistas te brindarán orientación personalizada para descubrir las soluciones que mejor se ajusten a tus requerimientos.";
   const description2 =
-    "Durante la implementación especialistas te acompañarán para que conozcas y seas un experto en tu plataforma.";
+    "En el proceso de incorporación, profesionales te guiarán para que comprendas y te conviertas en un conocedor del programa.";
   const description3 =
-    "Vive la experiencia, fortalece tu cultura organizacional y gestiona tu activo más valioso, las personas!";
+    "Move4it fortalece tu cultura organizacional y potencia tu recurso más preciado: ¡las personas!";
+
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
 
   return (
     <Row
@@ -30,16 +42,16 @@ const Problems = () => {
           current={3}
           items={[
             {
-              title: "Agenda una llamada",
+              title: "Programa una llamada",
               description: (
-                <Paragraph style={{ textAlign: "center", fontSize: "12px" }}>
+                <Paragraph style={{ textAlign: "center", fontSize: "13px" }}>
                   {description1}
                 </Paragraph>
               ),
               icon: <PhoneFilled style={{ fontSize: "30px" }} />,
             },
             {
-              title: "Súmate a la experiencia",
+              title: "Únete a la experiencia",
               description: (
                 <Paragraph style={{ textAlign: "center", fontSize: "12px" }}>
                   {description2}
@@ -48,7 +60,7 @@ const Problems = () => {
               icon: <PlusCircleFilled style={{ fontSize: "30px" }} />,
             },
             {
-              title: "Crea un lugar de trabajo más feliz",
+              title: "Genera un entorno más alegre",
               description: (
                 <Paragraph style={{ textAlign: "center", fontSize: "12px" }}>
                   {description3}
@@ -58,6 +70,18 @@ const Problems = () => {
             },
           ]}
         />
+      </Col>
+      <Col>
+        <Button
+          type="primary"
+          icon={<EditOutlined />}
+          style={{ marginRight: "50px" }}
+        >
+          {" "}
+          <Link smooth to="#contact" scroll={(el) => scrollWithOffset(el)}>
+            Empieza ahora
+          </Link>
+        </Button>
       </Col>
     </Row>
   );

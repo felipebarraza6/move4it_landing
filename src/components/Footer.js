@@ -11,13 +11,22 @@ const { Paragraph, Title } = Typography;
 
 const Footer = () => {
   return (
-    <Row align="middle" justify={"space-evenly"}>
+    <Row
+      align="middle"
+      justify={"space-evenly"}
+      style={{ padding: "50px", backgroundColor: "white" }}
+    >
       <Col>
         <img src={logo} width={"100px"} />
       </Col>
       <Col>
-        <Paragraph style={{ fontWeight: "600" }}>
-          Crea un lugar de trabajo más feliz ;)
+        <Paragraph
+          style={{
+            fontWeight: "600",
+            textAlign: window.innerWidth < 900 && "center",
+          }}
+        >
+          Eleva tu bienestar con Move4it: ¡Trabajo saludable, vida vibrante!
         </Paragraph>
       </Col>
       <Col>

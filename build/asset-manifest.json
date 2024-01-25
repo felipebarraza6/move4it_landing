@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.80d92366.css",
-    "main.js": "/static/js/main.14bba1a2.js",
-    "static/js/787.17ee953f.chunk.js": "/static/js/787.17ee953f.chunk.js",
-    "static/media/slider.jpg": "/static/media/slider.e3cc0bd6f2c9afcb995a.jpg",
-    "static/media/dem.png": "/static/media/dem.30fc976a50b21f79d079.png",
+    "main.css": "/static/css/main.9f6eb9f4.css",
+    "main.js": "/static/js/main.125f2689.js",
+    "static/js/787.13a5b4d2.chunk.js": "/static/js/787.13a5b4d2.chunk.js",
+    "static/media/slider1.png": "/static/media/slider1.5c80e58cf6cf0b95d420.png",
+    "static/media/m1.jpg": "/static/media/m1.48c6165f3df3040aaaca.jpg",
+    "static/media/b_empresas.png": "/static/media/b_empresas.0b7f2b266c903eaecc1a.png",
+    "static/media/b_empleados.png": "/static/media/b_empleados.07d871351a6b7d2e22f4.png",
+    "static/media/m2.png": "/static/media/m2.32a291157b632853f67b.png",
     "static/media/logoco.png": "/static/media/logoco.a7db8b7f726f55e64d1a.png",
-    "static/media/logo.png": "/static/media/logo.8dc9e1251e7823838caf.png",
     "index.html": "/index.html",
-    "main.80d92366.css.map": "/static/css/main.80d92366.css.map",
-    "main.14bba1a2.js.map": "/static/js/main.14bba1a2.js.map",
-    "787.17ee953f.chunk.js.map": "/static/js/787.17ee953f.chunk.js.map"
+    "main.9f6eb9f4.css.map": "/static/css/main.9f6eb9f4.css.map",
+    "main.125f2689.js.map": "/static/js/main.125f2689.js.map",
+    "787.13a5b4d2.chunk.js.map": "/static/js/787.13a5b4d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80d92366.css",
-    "static/js/main.14bba1a2.js"
+    "static/css/main.9f6eb9f4.css",
+    "static/js/main.125f2689.js"
   ]
 }

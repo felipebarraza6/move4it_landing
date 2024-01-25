@@ -10,34 +10,447 @@ const What = () => {
       justify={"center"}
       align={"middle"}
       id="who"
-      style={{ padding: "50px" }}
+      style={{ padding: "50px", zIndex: "0" }}
     >
       <Col>
-        <Title style={{ textAlign: "center" }}>
+        <Title style={{ textAlign: "center", marginBottom: "50px" }}>
           Ellos ya vivieron la experiencia Move4it
         </Title>
       </Col>
       <Col span={24}>
         <Row align={"middle"}>
-          <Col span={1}>
-            <Button
-              type={"primary"}
-              shape={"circle"}
-              icon={<ArrowLeftOutlined />}
-            />
-          </Col>
-          <Col span={22}>
-            <Carousel autoplay>
-              <div>
-                <Row justify={"space-evenly"}>
-                  <Col>
+          {window.innerWidth > 900 && (
+            <Col span={1}>
+              <Button
+                type={"primary"}
+                shape={"circle"}
+                icon={<ArrowLeftOutlined />}
+              />
+            </Col>
+          )}
+          {window.innerWidth > 900 ? (
+            <Col span={22}>
+              <Carousel autoplay>
+                <div>
+                  <Row justify={"space-evenly"}>
+                    <Col
+                      style={{
+                        marginBottom: window.innerWidth < 900 && "10px",
+                      }}
+                    >
+                      <Card
+                        hoverable
+                        style={{ width: "200px" }}
+                        cover={
+                          <Row justify={"center"}>
+                            <img
+                              width="200px"
+                              style={{ margin: "10px" }}
+                              src={src}
+                            />
+                          </Row>
+                        }
+                      >
+                        <Card.Meta
+                          description={
+                            <>
+                              <Paragraph style={{ textAlign: "left" }}>
+                                The passage experienced a surge in popularity
+                                during the 1960s when Letraset used it on their
+                                dry-transfer sheets, and again during the 90s.
+                              </Paragraph>
+                              <Paragraph>
+                                <Tag
+                                  color="blue-inverse"
+                                  style={{ marginBottom: "10px" }}
+                                >
+                                  Sandra Rivas
+                                </Tag>
+                                <Tag color="blue-inverse">
+                                  Jefa de calidad de vida
+                                </Tag>
+                              </Paragraph>
+                            </>
+                          }
+                        ></Card.Meta>
+                      </Card>
+                    </Col>
+                    <Col>
+                      <Card
+                        hoverable
+                        style={{ width: "200px" }}
+                        cover={
+                          <Row justify={"center"}>
+                            <img
+                              width="200px"
+                              style={{ margin: "10px" }}
+                              src={src}
+                            />
+                          </Row>
+                        }
+                      >
+                        <Card.Meta
+                          description={
+                            <>
+                              <Paragraph style={{ textAlign: "left" }}>
+                                The passage experienced a surge in popularity
+                                during the 1960s when Letraset used it on their
+                                dry-transfer sheets, and again during the 90s.
+                              </Paragraph>
+                              <Paragraph>
+                                <Tag
+                                  color="blue-inverse"
+                                  style={{ marginBottom: "10px" }}
+                                >
+                                  Sandra Rivas
+                                </Tag>
+                                <Tag color="blue-inverse">
+                                  Jefa de calidad de vida
+                                </Tag>
+                              </Paragraph>
+                            </>
+                          }
+                        ></Card.Meta>
+                      </Card>
+                    </Col>
+                    <Col>
+                      <Card
+                        hoverable
+                        style={{ width: "200px" }}
+                        cover={
+                          <Row justify={"center"}>
+                            <img
+                              width="200px"
+                              style={{ margin: "10px" }}
+                              src={src}
+                            />
+                          </Row>
+                        }
+                      >
+                        <Card.Meta
+                          description={
+                            <>
+                              <Paragraph style={{ textAlign: "left" }}>
+                                The passage experienced a surge in popularity
+                                during the 1960s when Letraset used it on their
+                                dry-transfer sheets, and again during the 90s.
+                              </Paragraph>
+                              <Paragraph>
+                                <Tag
+                                  color="blue-inverse"
+                                  style={{ marginBottom: "10px" }}
+                                >
+                                  Sandra Rivas
+                                </Tag>
+                                <Tag color="blue-inverse">
+                                  Jefa de calidad de vida
+                                </Tag>
+                              </Paragraph>
+                            </>
+                          }
+                        ></Card.Meta>
+                      </Card>
+                    </Col>
+                    <Col>
+                      <Card
+                        hoverable
+                        style={{ width: "200px" }}
+                        cover={
+                          <Row justify={"center"}>
+                            <img
+                              width="200px"
+                              style={{ margin: "10px" }}
+                              src={src}
+                            />
+                          </Row>
+                        }
+                      >
+                        <Card.Meta
+                          description={
+                            <>
+                              <Paragraph style={{ textAlign: "left" }}>
+                                The passage experienced a surge in popularity
+                                during the 1960s when Letraset used it on their
+                                dry-transfer sheets, and again during the 90s.
+                              </Paragraph>
+                              <Paragraph>
+                                <Tag
+                                  color="blue-inverse"
+                                  style={{ marginBottom: "10px" }}
+                                >
+                                  Sandra Rivas
+                                </Tag>
+                                <Tag color="blue-inverse">
+                                  Jefa de calidad de vida
+                                </Tag>
+                              </Paragraph>
+                            </>
+                          }
+                        ></Card.Meta>
+                      </Card>
+                    </Col>
+                    {window.innerWidth > 900 && (
+                      <Col>
+                        <Card
+                          hoverable
+                          style={{ width: "200px" }}
+                          cover={
+                            <Row justify={"center"}>
+                              <img
+                                width="200px"
+                                style={{ margin: "10px" }}
+                                src={src}
+                              />
+                            </Row>
+                          }
+                        >
+                          <Card.Meta
+                            description={
+                              <>
+                                <Paragraph style={{ textAlign: "left" }}>
+                                  The passage experienced a surge in popularity
+                                  during the 1960s when Letraset used it on
+                                  their dry-transfer sheets, and again during
+                                  the 90s.
+                                </Paragraph>
+                                <Paragraph>
+                                  <Tag
+                                    color="blue-inverse"
+                                    style={{ marginBottom: "10px" }}
+                                  >
+                                    Sandra Rivas
+                                  </Tag>
+                                  <Tag color="blue-inverse">
+                                    Jefa de calidad de vida
+                                  </Tag>
+                                </Paragraph>
+                              </>
+                            }
+                          ></Card.Meta>
+                        </Card>
+                      </Col>
+                    )}{" "}
+                  </Row>
+                </div>
+                <div>
+                  <Row justify={"space-evenly"}>
+                    <Col
+                      style={{
+                        marginBottom: window.innerWidth < 900 && "10px",
+                      }}
+                    >
+                      <Card
+                        hoverable
+                        style={{ width: "200px" }}
+                        cover={
+                          <Row justify={"center"}>
+                            <img
+                              width="200px"
+                              style={{ margin: "10px" }}
+                              src={src}
+                            />
+                          </Row>
+                        }
+                      >
+                        <Card.Meta
+                          description={
+                            <>
+                              <Paragraph style={{ textAlign: "left" }}>
+                                The passage experienced a surge in popularity
+                                during the 1960s when Letraset used it on their
+                                dry-transfer sheets, and again during the 90s.
+                              </Paragraph>
+                              <Paragraph>
+                                <Tag
+                                  color="blue-inverse"
+                                  style={{ marginBottom: "10px" }}
+                                >
+                                  Sandra Rivas
+                                </Tag>
+                                <Tag color="blue-inverse">
+                                  Jefa de calidad de vida
+                                </Tag>
+                              </Paragraph>
+                            </>
+                          }
+                        ></Card.Meta>
+                      </Card>
+                    </Col>
+                    <Col
+                      style={{
+                        marginBottom: window.innerWidth < 900 && "10px",
+                      }}
+                    >
+                      <Card
+                        hoverable
+                        style={{ width: "200px" }}
+                        cover={
+                          <Row justify={"center"}>
+                            <img
+                              width="200px"
+                              style={{ margin: "10px" }}
+                              src={src}
+                            />
+                          </Row>
+                        }
+                      >
+                        <Card.Meta
+                          description={
+                            <>
+                              <Paragraph style={{ textAlign: "left" }}>
+                                The passage experienced a surge in popularity
+                                during the 1960s when Letraset used it on their
+                                dry-transfer sheets, and again during the 90s.
+                              </Paragraph>
+                              <Paragraph>
+                                <Tag
+                                  color="blue-inverse"
+                                  style={{ marginBottom: "10px" }}
+                                >
+                                  Sandra Rivas
+                                </Tag>
+                                <Tag color="blue-inverse">
+                                  Jefa de calidad de vida
+                                </Tag>
+                              </Paragraph>
+                            </>
+                          }
+                        ></Card.Meta>
+                      </Card>
+                    </Col>
+                    <Col>
+                      <Card
+                        hoverable
+                        style={{ width: "200px" }}
+                        cover={
+                          <Row justify={"center"}>
+                            <img
+                              width="200px"
+                              style={{ margin: "10px" }}
+                              src={src}
+                            />
+                          </Row>
+                        }
+                      >
+                        <Card.Meta
+                          description={
+                            <>
+                              <Paragraph style={{ textAlign: "left" }}>
+                                The passage experienced a surge in popularity
+                                during the 1960s when Letraset used it on their
+                                dry-transfer sheets, and again during the 90s.
+                              </Paragraph>
+                              <Paragraph>
+                                <Tag
+                                  color="blue-inverse"
+                                  style={{ marginBottom: "10px" }}
+                                >
+                                  Sandra Rivas
+                                </Tag>
+                                <Tag color="blue-inverse">
+                                  Jefa de calidad de vida
+                                </Tag>
+                              </Paragraph>
+                            </>
+                          }
+                        ></Card.Meta>
+                      </Card>
+                    </Col>
+                    <Col>
+                      <Card
+                        hoverable
+                        style={{ width: "200px" }}
+                        cover={
+                          <Row justify={"center"}>
+                            <img
+                              width="200px"
+                              style={{ margin: "10px" }}
+                              src={src}
+                            />
+                          </Row>
+                        }
+                      >
+                        <Card.Meta
+                          description={
+                            <>
+                              <Paragraph style={{ textAlign: "left" }}>
+                                The passage experienced a surge in popularity
+                                during the 1960s when Letraset used it on their
+                                dry-transfer sheets, and again during the 90s.
+                              </Paragraph>
+                              <Paragraph>
+                                <Tag
+                                  color="blue-inverse"
+                                  style={{ marginBottom: "10px" }}
+                                >
+                                  Sandra Rivas
+                                </Tag>
+                                <Tag color="blue-inverse">
+                                  Jefa de calidad de vida
+                                </Tag>
+                              </Paragraph>
+                            </>
+                          }
+                        ></Card.Meta>
+                      </Card>
+                    </Col>
+                    {window.innerWidth > 900 && (
+                      <Col>
+                        <Card
+                          hoverable
+                          style={{ width: "200px" }}
+                          cover={
+                            <Row justify={"center"}>
+                              <img
+                                width="200px"
+                                style={{ margin: "10px" }}
+                                src={src}
+                              />
+                            </Row>
+                          }
+                        >
+                          <Card.Meta
+                            description={
+                              <>
+                                <Paragraph style={{ textAlign: "left" }}>
+                                  The passage experienced a surge in popularity
+                                  during the 1960s when Letraset used it on
+                                  their dry-transfer sheets, and again during
+                                  the 90s.
+                                </Paragraph>
+                                <Paragraph>
+                                  <Tag
+                                    color="blue-inverse"
+                                    style={{ marginBottom: "10px" }}
+                                  >
+                                    Sandra Rivas
+                                  </Tag>
+                                  <Tag color="blue-inverse">
+                                    Jefa de calidad de vida
+                                  </Tag>
+                                </Paragraph>
+                              </>
+                            }
+                          ></Card.Meta>
+                        </Card>
+                      </Col>
+                    )}{" "}
+                  </Row>
+                </div>
+              </Carousel>
+            </Col>
+          ) : (
+            <>
+              <Col span={24}>
+                <Carousel autoplay>
+                  <div>
                     <Card
                       hoverable
-                      style={{ width: "200px" }}
+                      style={{ width: "100%" }}
                       cover={
                         <Row justify={"center"}>
                           <img
-                            width="200px"
+                            width="100%"
                             style={{ margin: "10px" }}
                             src={src}
                           />
@@ -67,15 +480,15 @@ const What = () => {
                         }
                       ></Card.Meta>
                     </Card>
-                  </Col>
-                  <Col>
+                  </div>
+                  <div>
                     <Card
                       hoverable
-                      style={{ width: "200px" }}
+                      style={{ width: "100%" }}
                       cover={
                         <Row justify={"center"}>
                           <img
-                            width="200px"
+                            width="100%"
                             style={{ margin: "10px" }}
                             src={src}
                           />
@@ -105,326 +518,21 @@ const What = () => {
                         }
                       ></Card.Meta>
                     </Card>
-                  </Col>
-                  <Col>
-                    <Card
-                      hoverable
-                      style={{ width: "200px" }}
-                      cover={
-                        <Row justify={"center"}>
-                          <img
-                            width="200px"
-                            style={{ margin: "10px" }}
-                            src={src}
-                          />
-                        </Row>
-                      }
-                    >
-                      <Card.Meta
-                        description={
-                          <>
-                            <Paragraph style={{ textAlign: "left" }}>
-                              The passage experienced a surge in popularity
-                              during the 1960s when Letraset used it on their
-                              dry-transfer sheets, and again during the 90s.
-                            </Paragraph>
-                            <Paragraph>
-                              <Tag
-                                color="blue-inverse"
-                                style={{ marginBottom: "10px" }}
-                              >
-                                Sandra Rivas
-                              </Tag>
-                              <Tag color="blue-inverse">
-                                Jefa de calidad de vida
-                              </Tag>
-                            </Paragraph>
-                          </>
-                        }
-                      ></Card.Meta>
-                    </Card>
-                  </Col>
-                  <Col>
-                    <Card
-                      hoverable
-                      style={{ width: "200px" }}
-                      cover={
-                        <Row justify={"center"}>
-                          <img
-                            width="200px"
-                            style={{ margin: "10px" }}
-                            src={src}
-                          />
-                        </Row>
-                      }
-                    >
-                      <Card.Meta
-                        description={
-                          <>
-                            <Paragraph style={{ textAlign: "left" }}>
-                              The passage experienced a surge in popularity
-                              during the 1960s when Letraset used it on their
-                              dry-transfer sheets, and again during the 90s.
-                            </Paragraph>
-                            <Paragraph>
-                              <Tag
-                                color="blue-inverse"
-                                style={{ marginBottom: "10px" }}
-                              >
-                                Sandra Rivas
-                              </Tag>
-                              <Tag color="blue-inverse">
-                                Jefa de calidad de vida
-                              </Tag>
-                            </Paragraph>
-                          </>
-                        }
-                      ></Card.Meta>
-                    </Card>
-                  </Col>
-                  <Col>
-                    <Card
-                      hoverable
-                      style={{ width: "200px" }}
-                      cover={
-                        <Row justify={"center"}>
-                          <img
-                            width="200px"
-                            style={{ margin: "10px" }}
-                            src={src}
-                          />
-                        </Row>
-                      }
-                    >
-                      <Card.Meta
-                        description={
-                          <>
-                            <Paragraph style={{ textAlign: "left" }}>
-                              The passage experienced a surge in popularity
-                              during the 1960s when Letraset used it on their
-                              dry-transfer sheets, and again during the 90s.
-                            </Paragraph>
-                            <Paragraph>
-                              <Tag
-                                color="blue-inverse"
-                                style={{ marginBottom: "10px" }}
-                              >
-                                Sandra Rivas
-                              </Tag>
-                              <Tag color="blue-inverse">
-                                Jefa de calidad de vida
-                              </Tag>
-                            </Paragraph>
-                          </>
-                        }
-                      ></Card.Meta>
-                    </Card>
-                  </Col>{" "}
-                </Row>
-              </div>
-              <div>
-                <Row justify={"space-evenly"}>
-                  <Col>
-                    <Card
-                      hoverable
-                      style={{ width: "200px" }}
-                      cover={
-                        <Row justify={"center"}>
-                          <img
-                            width="200px"
-                            style={{ margin: "10px" }}
-                            src={src}
-                          />
-                        </Row>
-                      }
-                    >
-                      <Card.Meta
-                        description={
-                          <>
-                            <Paragraph style={{ textAlign: "left" }}>
-                              The passage experienced a surge in popularity
-                              during the 1960s when Letraset used it on their
-                              dry-transfer sheets, and again during the 90s.
-                            </Paragraph>
-                            <Paragraph>
-                              <Tag
-                                color="blue-inverse"
-                                style={{ marginBottom: "10px" }}
-                              >
-                                Sandra Rivas
-                              </Tag>
-                              <Tag color="blue-inverse">
-                                Jefa de calidad de vida
-                              </Tag>
-                            </Paragraph>
-                          </>
-                        }
-                      ></Card.Meta>
-                    </Card>
-                  </Col>
-                  <Col>
-                    <Card
-                      hoverable
-                      style={{ width: "200px" }}
-                      cover={
-                        <Row justify={"center"}>
-                          <img
-                            width="200px"
-                            style={{ margin: "10px" }}
-                            src={src}
-                          />
-                        </Row>
-                      }
-                    >
-                      <Card.Meta
-                        description={
-                          <>
-                            <Paragraph style={{ textAlign: "left" }}>
-                              The passage experienced a surge in popularity
-                              during the 1960s when Letraset used it on their
-                              dry-transfer sheets, and again during the 90s.
-                            </Paragraph>
-                            <Paragraph>
-                              <Tag
-                                color="blue-inverse"
-                                style={{ marginBottom: "10px" }}
-                              >
-                                Sandra Rivas
-                              </Tag>
-                              <Tag color="blue-inverse">
-                                Jefa de calidad de vida
-                              </Tag>
-                            </Paragraph>
-                          </>
-                        }
-                      ></Card.Meta>
-                    </Card>
-                  </Col>
-                  <Col>
-                    <Card
-                      hoverable
-                      style={{ width: "200px" }}
-                      cover={
-                        <Row justify={"center"}>
-                          <img
-                            width="200px"
-                            style={{ margin: "10px" }}
-                            src={src}
-                          />
-                        </Row>
-                      }
-                    >
-                      <Card.Meta
-                        description={
-                          <>
-                            <Paragraph style={{ textAlign: "left" }}>
-                              The passage experienced a surge in popularity
-                              during the 1960s when Letraset used it on their
-                              dry-transfer sheets, and again during the 90s.
-                            </Paragraph>
-                            <Paragraph>
-                              <Tag
-                                color="blue-inverse"
-                                style={{ marginBottom: "10px" }}
-                              >
-                                Sandra Rivas
-                              </Tag>
-                              <Tag color="blue-inverse">
-                                Jefa de calidad de vida
-                              </Tag>
-                            </Paragraph>
-                          </>
-                        }
-                      ></Card.Meta>
-                    </Card>
-                  </Col>
-                  <Col>
-                    <Card
-                      hoverable
-                      style={{ width: "200px" }}
-                      cover={
-                        <Row justify={"center"}>
-                          <img
-                            width="200px"
-                            style={{ margin: "10px" }}
-                            src={src}
-                          />
-                        </Row>
-                      }
-                    >
-                      <Card.Meta
-                        description={
-                          <>
-                            <Paragraph style={{ textAlign: "left" }}>
-                              The passage experienced a surge in popularity
-                              during the 1960s when Letraset used it on their
-                              dry-transfer sheets, and again during the 90s.
-                            </Paragraph>
-                            <Paragraph>
-                              <Tag
-                                color="blue-inverse"
-                                style={{ marginBottom: "10px" }}
-                              >
-                                Sandra Rivas
-                              </Tag>
-                              <Tag color="blue-inverse">
-                                Jefa de calidad de vida
-                              </Tag>
-                            </Paragraph>
-                          </>
-                        }
-                      ></Card.Meta>
-                    </Card>
-                  </Col>
-                  <Col>
-                    <Card
-                      hoverable
-                      style={{ width: "200px" }}
-                      cover={
-                        <Row justify={"center"}>
-                          <img
-                            width="200px"
-                            style={{ margin: "10px" }}
-                            src={src}
-                          />
-                        </Row>
-                      }
-                    >
-                      <Card.Meta
-                        description={
-                          <>
-                            <Paragraph style={{ textAlign: "left" }}>
-                              The passage experienced a surge in popularity
-                              during the 1960s when Letraset used it on their
-                              dry-transfer sheets, and again during the 90s.
-                            </Paragraph>
-                            <Paragraph>
-                              <Tag
-                                color="blue-inverse"
-                                style={{ marginBottom: "10px" }}
-                              >
-                                Sandra Rivas
-                              </Tag>
-                              <Tag color="blue-inverse">
-                                Jefa de calidad de vida
-                              </Tag>
-                            </Paragraph>
-                          </>
-                        }
-                      ></Card.Meta>
-                    </Card>
-                  </Col>{" "}
-                </Row>
-              </div>
-            </Carousel>
-          </Col>
-          <Col span={1}>
-            <Button
-              type={"primary"}
-              shape={"circle"}
-              icon={<ArrowRightOutlined />}
-            />
-          </Col>
+                  </div>
+                </Carousel>
+              </Col>
+            </>
+          )}
+
+          {window.innerWidth > 900 && (
+            <Col span={1}>
+              <Button
+                type={"primary"}
+                shape={"circle"}
+                icon={<ArrowRightOutlined />}
+              />
+            </Col>
+          )}
         </Row>
       </Col>
     </Row>

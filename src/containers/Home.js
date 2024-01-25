@@ -5,14 +5,16 @@ import {
   InstagramFilled,
   TwitterCircleFilled,
 } from "@ant-design/icons";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logoco.png";
+
 import MenuNav from "../components/nav/MenuNav";
 import Sliders from "../components/Sliders";
 import Who from "../components/Who";
 import Services from "../components/Services";
 import What from "../components/What";
 import Problems from "../components/Problems";
-import Faq from "../components/Faq";
+import Contact from "../components/Contact";
+import Ready from "../components/Ready";
 import Footer from "../components/Footer";
 const { Content, Header } = Layout;
 
@@ -22,13 +24,13 @@ const Home = () => {
       <div>
         <Row
           justify={"end"}
-          style={{ backgroundColor: "#001529", padding: "10px" }}
+          style={{ backgroundColor: "white", padding: "10px" }}
         >
           <Col>
             <FacebookFilled
               style={{
                 fontSize: "20px",
-                color: "white",
+                color: "#001529",
                 marginRight: "10px",
               }}
             />
@@ -37,7 +39,7 @@ const Home = () => {
             <InstagramFilled
               style={{
                 fontSize: "20px",
-                color: "white",
+                color: "#001529",
                 marginRight: "10px",
               }}
             />
@@ -46,7 +48,7 @@ const Home = () => {
             <TwitterCircleFilled
               style={{
                 fontSize: "20px",
-                color: "white",
+                color: "#001529",
               }}
             />
           </Col>
@@ -62,11 +64,20 @@ const Home = () => {
       </Affix>
       <Content>
         <Sliders />
-        <Who />
+        <div id="what">
+          <Who />
+        </div>
+
         <Services />
         <What />
+
         <Problems />
-        <Faq />
+        <div id="benefits">
+          <Ready />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
         <Footer />
       </Content>
     </Layout>
@@ -75,6 +86,8 @@ const Home = () => {
 
 const styles = {
   header: {
+    zIndex: 1000,
+    backgroundColor: "white",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",

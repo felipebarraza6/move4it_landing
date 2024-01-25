@@ -1,23 +1,30 @@
 import React from "react";
 import { Carousel, Row, Col, Typography, Button } from "antd";
 import { PlayCircleOutlined, FormOutlined } from "@ant-design/icons";
-import slide1 from "../assets/img/slider.jpg";
 
-const { Title, Paragraph } = Typography;
+import { HashLink as Link } from "react-router-hash-link";
+import slide1 from "../assets/img/slider1.png";
+
+const { Title, Paragraph, Text } = Typography;
 
 const Sliders = () => {
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
   return (
-    <Carousel style={{ marginTop: "0px" }}>
+    <Carousel style={{ marginTop: "0px", zIndex: "0" }}>
       <div>
         <div
           style={{
             margin: "0px",
-            height: "500px",
+            height: "400px",
             width: "100%",
-            padding: "100px",
+            padding: window.innerWidth > 900 ? "100px" : "20px",
             color: "#fff",
             backgroundImage: `url(${slide1})`,
-            backgroundPosition: "center left",
+            backgroundPosition: "center center",
           }}
         >
           <Row>
@@ -27,6 +34,7 @@ const Sliders = () => {
                 style={{
                   color: "white",
                   backgroundColor: "#001529",
+                  opacity: window.innerWidth < 900 && "0.8",
                   padding: "10px",
                   borderRadius: "10px",
                 }}
@@ -36,84 +44,54 @@ const Sliders = () => {
             </Col>
           </Row>
           <Row>
-            <Col span={12} style={{ marginLeft: "20px", marginTop: "-30px" }}>
-              <Title
-                level={4}
-                style={{
-                  color: "white",
-                  backgroundColor: "#001529",
-                  padding: "10px",
-                  borderRadius: "10px",
-                }}
-              >
-                Encuentra un estilo de vida balanceado, saludable y motivador.
-              </Title>
-              <Button
-                icon={<PlayCircleOutlined />}
-                size="large"
-                type="primary"
-                style={{ marginRight: "10px" }}
-              >
-                VIDEO
-              </Button>
-              <Button icon={<FormOutlined />} size="large" type="primary">
-                Empieza ahora
-              </Button>
+            <Col
+              span={24}
+              style={{ marginLeft: window.innerWidth > 900 ? "20px" : "0px" }}
+            >
+              {window.innerWidth > 900 ? (
+                <Text
+                  style={{
+                    color: "white",
+                    fontSize: "20px",
+                    backgroundColor: "#001529",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Encuentra un estilo de vida balanceado, saludable y motivador.
+                  ¡Eleva tu bienestar!
+                </Text>
+              ) : (
+                <Paragraph
+                  style={{
+                    color: "white",
+                    fontSize: "20px",
+                    backgroundColor: "#001529",
+                    opacity: window.innerWidth < 900 && "0.8",
+                    padding: "10px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Encuentra un estilo de vida balanceado, saludable y motivador.
+                  ¡Eleva tu bienestar!
+                </Paragraph>
+              )}
             </Col>
-          </Row>
-        </div>
-      </div>
-      <div>
-        <div
-          style={{
-            margin: "0px",
-            height: "500px",
-            width: "100%",
-            padding: "100px",
-            color: "#fff",
-            backgroundImage: `url(${slide1})`,
-            backgroundPosition: "center left",
-          }}
-        >
-          <Row>
-            <Col>
-              <Title
-                level={2}
-                style={{
-                  color: "white",
-                  backgroundColor: "#001529",
-                  padding: "10px",
-                  borderRadius: "10px",
-                }}
-              >
-                Descubre Nuestro Programa Único de Actividades y Beneficios para
-                Empresas y Empleados."
-              </Title>
-            </Col>
-          </Row>
-          <Row>
-            <Col span={12} style={{ marginLeft: "20px", marginTop: "-30px" }}>
-              <Title
-                level={4}
-                style={{
-                  color: "white",
-                  backgroundColor: "#001529",
-                  padding: "10px",
-                  borderRadius: "10px",
-                }}
-              >
-                Únete a la revolución del wellness, ¡juntos movemos el futuro!
-              </Title>{" "}
-              <Button
-                icon={<PlayCircleOutlined />}
-                size="large"
-                type="primary"
-                style={{ marginRight: "10px" }}
-              >
-                VIDEO
-              </Button>
+            <Col
+              span={24}
+              style={{
+                marginTop: window.innerWidth > 900 ? "20px" : "0px",
+                marginLeft: window.innerWidth > 900 ? "30px" : "0px",
+              }}
+            >
               <Button icon={<FormOutlined />} size="large" type="primary">
-                Empieza ahora
+                <Link
+                  smooth
+                  to="#contact"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  Empieza ahora
+                </Link>
               </Button>
             </Col>
           </Row>

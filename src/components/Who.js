@@ -1,23 +1,32 @@
 import React from "react";
 import { Row, Col, Card, Typography } from "antd";
-import { EyeFilled, RocketFilled } from "@ant-design/icons";
+import { SearchOutlined, AimOutlined } from "@ant-design/icons";
+
 const { Title, Paragraph } = Typography;
+
 const Who = () => {
   return (
     <Row
       justify={"space-evenly"}
       align={"middle"}
-      id="what"
-      style={{ padding: "70px" }}
+      style={{
+        padding: window.innerWidth > 900 ? "70px" : "20px",
+        marginBottom: window.innerWidth < 900 && "70px",
+      }}
     >
-      <Col span={7} style={{ marginRight: "20px" }}>
-        <Title style={{ textAlign: "left" }}>¿Qué es Move 4it?</Title>
+      <Col
+        xs={24}
+        lg={7}
+        xl={7}
+        style={{ marginRight: window.innerWidth > 900 && "20px" }}
+      >
+        <Title style={{ textAlign: "center" }}>¿Qué es Move4it?</Title>
 
         <Paragraph
           style={{
             textAlign: "justify",
-            paddingLeft: "30px",
-            paddingRight: "30px",
+            paddingLeft: "0px",
+            paddingRight: "0px",
             textIndent: "20px",
           }}
         >
@@ -28,17 +37,21 @@ const Who = () => {
           la salud física.
         </Paragraph>
       </Col>
-      <Col span={16}>
-        <Row align={"middle"} justify={"space-between"}>
-          <Col span={12}>
+      <Col xs={24} lg={16} xl={16}>
+        <Row
+          align={"middle"}
+          justify={window.innerWidth > 900 ? "space-between" : "center"}
+        >
+          <Col lg={12} xl={12}>
             <Card
               title={
                 <>
-                  <EyeFilled style={{ marginRight: "10px" }} />
+                  <SearchOutlined style={{ marginRight: "10px" }} />
                   Visión
                 </>
               }
               style={{
+                width: window.innerWidth > 900 ? "90%" : "300px",
                 margin: "10px",
                 border: "0.1px solid #ffffff",
                 boxShadow:
@@ -47,21 +60,25 @@ const Who = () => {
             >
               <Row>
                 <Col>
-                  En Move4it, visualizamos un mundo laboral donde cada individuo
-                  está inspirado a moverse, a vivir de forma activa y saludable.
+                  Visualizamos un mundo laboral donde cada individuo está
+                  inspirado a moverse, a vivir de forma activa y saludable.
+                  Queremos ser la fuerza motriz detrás de un cambio
+                  significativo en las empresas
                 </Col>
               </Row>
             </Card>
           </Col>
-          <Col span={10}>
+          <Col lg={12} xl={12}>
             <Card
               title={
                 <>
-                  <RocketFilled style={{ marginRight: "10px" }} />
+                  <AimOutlined style={{ marginRight: "10px" }} />
                   Mision
                 </>
               }
               style={{
+                marginTop: window.innerWidth > 900 ? "0px" : "30px",
+                width: window.innerWidth > 900 ? "90%" : "300px",
                 margin: "10px",
                 border: "0.0px solid black",
                 boxShadow:
@@ -70,11 +87,10 @@ const Who = () => {
             >
               <Row>
                 <Col>
-                  Nuestra visión es ser la fuerza motriz detrás de un cambio
-                  significativo en las empresas, al fomentar un bienestar
-                  integral que transforme la vida de los empleados y, en última
-                  instancia, la salud y la felicidad de las comunidades a nivel
-                  global."
+                  Nuestra misión es redefinir el bienestar empresarial. Estamos
+                  comprometidos a proporcionar a las empresas herramientas
+                  interactivas y motivadoras que inspiren a adoptar un estilo de
+                  vida saludable.
                 </Col>
               </Row>
             </Card>
