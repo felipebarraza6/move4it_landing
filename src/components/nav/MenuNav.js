@@ -169,7 +169,7 @@ const MenuNav = () => {
             <Button
               type={"primary"}
               style={{ ...styles.btn, marginLeft: "10px" }}
-              onClick={() => navigate("#portal")}
+              onClick={() => navigate("http://186.64.113.30:4200/")}
               icon={<UserOutlined />}
             >
               Portal Cliente
